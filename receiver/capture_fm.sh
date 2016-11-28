@@ -5,7 +5,7 @@ FREQ=$1
 CLIP_LENGTH=$2
 OUTPUT=$3
 
-cd $OUTPUT
+cd $FREQ_$OUTPUT
 
 while : 
 do
@@ -29,7 +29,7 @@ do
 
 	# Save file
 	END_TIME=`date +%s`
-	FILENAME=$START_TIME,$(($END_TIME-$START_TIME)).mp3
+	FILENAME=$START_TIME,$(($END_TIME-$START_TIME)),$FREQ.mp3
 	
 	echo "Saving to" $FILENAME
 	mv $TEMP_FILENAME $FILENAME
